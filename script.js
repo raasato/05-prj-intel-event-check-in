@@ -30,7 +30,10 @@ form.addEventListener("submit", function (event) {
   teamCounter.textContent = parseInt(teamCounter.textContent) + 1;
 
   // show welcome message
-  const message = `Welcome, ${name} from ${teamName}!`;
+  const welcomeMessage = document.getElementById("greeting");
+  const capitalizedName = name.charAt(0).toUpperCase() + name.slice(1);
+  const message = `Welcome, ${capitalizedName} from ${teamName}!`;
+  welcomeMessage.textContent = message;
   console.log(message); // log the welcome message to the console
 
   form.reset(); // reset the form for the next check-in
