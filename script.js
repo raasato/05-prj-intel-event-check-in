@@ -26,6 +26,8 @@ form.addEventListener("submit", function (event) {
   console.log(`Progress: ${percentage}`); // log the progress percentage to the console
   const attendance = document.getElementById("attendeeCount");
   attendance.textContent = `${count}`;
+  const progressWidth = document.getElementById("progressBar");
+  progressWidth.style.width = percentage;
 
   // update team counter
   const teamCounter = document.getElementById(team + "Count");
