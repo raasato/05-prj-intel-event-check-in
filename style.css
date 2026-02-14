@@ -25,7 +25,8 @@ body {
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(
+  background:
+    linear-gradient(
       135deg,
       rgba(0, 153, 219, 0.9) 0%,
       rgba(0, 104, 181, 0.9) 50%,
@@ -330,6 +331,20 @@ select {
   gap: 5px;
 }
 
+.team-list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 6px;
+  display: grid;
+  gap: 4px;
+  text-align: left;
+}
+
+.team-list li {
+  font-size: 13px;
+  color: #475569;
+}
+
 /* Team card colors */
 .team-card.water {
   background-color: #e8f7fc;
@@ -345,6 +360,36 @@ select {
   font-size: 15px;
   font-weight: 500;
   color: #475569;
+}
+
+/* Confetti effect */
+.confetti-container {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 9999;
+}
+
+.confetti {
+  position: absolute;
+  top: -10px;
+  width: 10px;
+  height: 14px;
+  opacity: 0.9;
+  border-radius: 2px;
+  animation: confetti-fall 2.6s linear forwards;
+}
+
+@keyframes confetti-fall {
+  0% {
+    transform: translateY(-10px) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(110vh) rotate(360deg);
+    opacity: 0;
+  }
 }
 
 /* Mobile responsive */
